@@ -1,0 +1,117 @@
+main, body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666
+}
+
+/* Body Images */
+.reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image {
+    position: relative;
+    opacity: 0.70;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* creates parallax scroll */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.reveal-image-1 {
+    background-image: url('/img/cjg-bacalar-no_logo-1920x1080.jpg');
+    min-height: 100%;
+}
+
+.foreground-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('/img/cjg-bacalar-no_logo-front-image-1920x1080.png');
+    z-index: 10;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 1;
+}
+
+
+.reveal-image-2 {
+    background-image: url('/img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
+    min-height: 400px;
+}
+
+.reveal-image-3 {
+    background-image: url('/img/scott-graham-5fNmWej4tAA-unsplash.jpg');
+    min-height: 400px;
+}
+
+/* Sections */
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.reveal-text {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.reveal-text .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.reveal-text .border.trans {
+    /* background-color: transparent; */
+    opacity: 0.7;
+}
+
+/* Nav Header */
+.nav-header {
+    display: flex;
+    align-items: center;
+    max-height: 6em;
+    padding: 0.5em;
+    background-color: lightgray;
+}
+
+.header-logo img {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2em;
+    max-height: 6em;
+    width: 1fr;
+}
+
+.nav-header ul {
+    display:flex;
+    align-items: space-around;
+    justify-content: space-between;
+    width: 3fr;
+    background: red;
+    padding: 2em;
+}
+
+@media(max-width: 568px) {
+    .reveal-image-1, .reveal-image-2, .reveal-image-3 {
+        background-attachment: scroll;
+    }
+}
