@@ -14,7 +14,7 @@ main, body, html {
 }
 
 /* Body Images */
-.reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image, #big-logo {
+.reveal-image-0, .reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image, .big-logo {
     position: relative;
     opacity: 0.70;
     background-size: cover;
@@ -26,15 +26,19 @@ main, body, html {
     justify-content: center;
 }
 
-.reveal-image-1 {
+.reveal-image-0 {
     background-image: url('./img/cjg-bacalar-no_logo-1920x1080.jpg');
     min-height: 100%;
 }
 
-#big-logo {
-    margin-top: 10em;
+.big-logo {
+    margin-top: 20em;
     opacity: 1;
     width: 10%;
+}
+
+#big-logo-bottom {
+    margin: 0;
 }
 
 .foreground-image {
@@ -48,6 +52,10 @@ main, body, html {
     opacity: 1;
 }
 
+.reveal-image-1 {
+    background-image: url('./img/ben-rosett-WdJkXFQ4VHY-unsplash.jpg');
+    min-height: 400px;
+}
 
 .reveal-image-2 {
     background-image: url('./img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
@@ -65,34 +73,48 @@ main, body, html {
     padding: 50px 80px;
 }
 
+.section p {
+    width: 75%;
+    margin: auto;
+}
+
 .section-light {
     background-color: #f4f4f4;
     color: #666;
 }
 
 .section-dark {
-    background-color: #282e34;
-    color: #ddd;
+    background-color: #2b3438;
+    color: #ebebeb;
 }
 
 .reveal-text {
-    width: 100%;
+    width: 40%;
     text-align: center;
     color: #000;
     font-size: 27px;
-    letter-spacing: 8px;
+    letter-spacing: 7px;
+    line-height: 1.5em;
     text-transform: uppercase;
 }
 
 .reveal-text .border {
+    margin: auto;
     background-color: #111;
     color: #fff;
     padding: 20px;
+
 }
 
 .reveal-text .border.trans {
     /* background-color: transparent; */
     opacity: 0.7;
+}
+
+.attribution {
+    font-size: .5em;
+    font-style:italic;
+    line-height: 1em;
 }
 
 /* Nav Header */
@@ -169,7 +191,7 @@ nav {
         overflow-x: hidden;
     }
 
-    .reveal-image-1, .reveal-image-2, .reveal-image-3 {
+    .reveal-image-0, .reveal-image-1, .reveal-image-2, .reveal-image-3 {
         background-attachment: scroll;
     }
 
@@ -177,12 +199,12 @@ nav {
         visibility: hidden;
     }
 
-    .reveal-image-1 {
+    .reveal-image-0 {
         background-image: url('./img/cjg-bacalar-1920x1080.jpg');
         min-height: 55%;
     }
 
-    #big-logo {
+    .big-logo {
         visibility: hidden;
     }
 
