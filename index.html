@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
     <title>Cameron Guthrie</title>
 </head>
 <body>
     <header class="nav-header">
         <div class="header-logo">
-            <img src="/img/CJG-logo---blue-box---square-ish.png" alt="Cameron Guthrie logo"> 
+            <h1>Cameron Guthrie</h1>
+            <!-- <img src="./img/CJG-logo---blue-box---square-ish.png" alt="Cameron Guthrie logo">  -->
         </div>
-        <nav>
-            <ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav id="main-nav">
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#bio">Bio</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="find-me">Find Me</a></li>
+                <li><a href="#find-me">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/cameronguthrie" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/cameronjguthrie" target="_blank">Instagram</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="reveal-image-1">
+        <div class="reveal-image-1" id="home">
             <div class="foreground-image"></div>
-            <div class="reveal-text">
-                <img src="/img/CJG-logo---blue-box-800x279.png" alt="Cameron Guthrie blue box logo">
+            <div class="reveal-text" id="big-logo">
+                <img src="./img/CJG-logo---blue-box-800x279.png" alt="Cameron Guthrie blue box logo">
             </div>
         </div>
 
@@ -71,10 +77,11 @@
 
         <div class="reveal-image-1">
             <div class="foreground-image"></div>
-            <div class="reveal-text">
-                <img src="/img/CJG-logo---blue-box-800x279.png" alt="Cameron Guthrie blue box logo">
+            <div class="reveal-text" id="big-logo">
+                <img src="./img/CJG-logo---blue-box-800x279.png" alt="Cameron Guthrie blue box logo">
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

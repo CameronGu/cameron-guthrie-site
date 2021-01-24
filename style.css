@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 main, body, html {
     height: 100%;
     margin: 0;
@@ -9,7 +14,7 @@ main, body, html {
 }
 
 /* Body Images */
-.reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image {
+.reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image, #big-logo {
     position: relative;
     opacity: 0.70;
     background-size: cover;
@@ -22,29 +27,35 @@ main, body, html {
 }
 
 .reveal-image-1 {
-    background-image: url('/img/cjg-bacalar-no_logo-1920x1080.jpg');
+    background-image: url('./img/cjg-bacalar-no_logo-1920x1080.jpg');
     min-height: 100%;
+}
+
+#big-logo {
+    margin-top: 10em;
+    opacity: 1;
+    width: 10%;
 }
 
 .foreground-image {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('/img/cjg-bacalar-no_logo-front-image-1920x1080.png');
+    background-image: url('./img/cjg-bacalar-no_logo-front-image-1920x1080.png');
     z-index: 10;
-    min-height: 100%;
     min-width: 100%;
+    min-height: 100%;
     opacity: 1;
 }
 
 
 .reveal-image-2 {
-    background-image: url('/img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
+    background-image: url('./img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
     min-height: 400px;
 }
 
 .reveal-image-3 {
-    background-image: url('/img/scott-graham-5fNmWej4tAA-unsplash.jpg');
+    background-image: url('./img/scott-graham-5fNmWej4tAA-unsplash.jpg');
     min-height: 400px;
 }
 
@@ -86,32 +97,151 @@ main, body, html {
 
 /* Nav Header */
 .nav-header {
+    position: fixed;
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    max-height: 6em;
-    padding: 0.5em;
-    background-color: lightgray;
+    height: 8vh;
+    padding: .25em 1em;
+    background-color: #ebebeb;
+    width: 100%;
+    z-index:100;
 }
 
-.header-logo img {
+/* .header-logo img {
     display: flex;
     justify-content: flex-start;
     margin-left: 2em;
     max-height: 6em;
     width: 1fr;
+} */
+
+.header-logo h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1em;
+    text-align: center;
+    color: #55878a;
 }
 
-.nav-header ul {
+nav {
+    width: 80%;
+}
+
+.nav-links {
     display:flex;
     align-items: space-around;
-    justify-content: space-between;
-    width: 3fr;
-    background: red;
-    padding: 2em;
+    justify-content: space-around;
+    width: 5fr;
+    padding: 1.5em;
+    gap: .75em;
+    overflow-x: hidden;
 }
 
-@media(max-width: 568px) {
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: #55878a;
+    cursor: pointer;
+    user-select: none
+}
+
+.nav-links a:hover {
+    text-shadow: 2px 2px 3px rgb(204, 115, 64);
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 20px;
+    height: 3px;
+    margin: 5px;
+    background-color: #55878a;
+    transition: all 0.3s ease;
+}
+
+@media(max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .reveal-image-1, .reveal-image-2, .reveal-image-3 {
         background-attachment: scroll;
     }
+
+    .foreground-image {
+        visibility: hidden;
+    }
+
+    .reveal-image-1 {
+        background-image: url('./img/cjg-bacalar-1920x1080.jpg');
+        min-height: 55%;
+    }
+
+    #big-logo {
+        visibility: hidden;
+    }
+
+    .header-logo {
+        font-size: .75em;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #ebebeb;
+        opacity: 1;
+        z-index: 11;
+        max-width: 55%;
+        transform: translateX(100%);
+        
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
 }
