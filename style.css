@@ -28,7 +28,7 @@ main, body, html {
 }
 
 .reveal-image-0 {
-    background-image: url('./img/cjg-bacalar-no_logo-1920x1080.jpg');
+    background-image: url('./img/cjg-bacalar-no_logo-1920x1080.webp');
     min-height: 100%;
 }
 
@@ -46,7 +46,7 @@ main, body, html {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url('./img/cjg-bacalar-no_logo-front-image-1920x1080.png');
+    background-image: url('./img/cjg-bacalar-no_logo-front-image-1920x1080.webp');
     z-index: 10;
     min-width: 100%;
     min-height: 100%;
@@ -54,17 +54,17 @@ main, body, html {
 }
 
 .reveal-image-1 {
-    background-image: url('./img/ben-rosett-WdJkXFQ4VHY-unsplash.jpg');
+    background-image: url('./img/ben-rosett-WdJkXFQ4VHY-unsplash.webp');
     min-height: 400px;
 }
 
 .reveal-image-2 {
-    background-image: url('./img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.jpg');
+    background-image: url('./img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.webp');
     min-height: 400px;
 }
 
 .reveal-image-3 {
-    background-image: url('./img/scott-graham-5fNmWej4tAA-unsplash.jpg');
+    background-image: url('./img/scott-graham-5fNmWej4tAA-unsplash.webp');
     min-height: 400px;
 }
 
@@ -313,7 +313,7 @@ nav {
     }
 
     .reveal-image-0 {
-        background-image: url('./img/cjg-bacalar-1920x1080.jpg');
+        background-image: url('./img/cjg-bacalar-1920x1080.webp');
         min-height: 55%;
     }
 
