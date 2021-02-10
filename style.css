@@ -53,19 +53,20 @@ main, body, html {
     opacity: 1;
 }
 
+.reveal-image-1, .reveal-image-2, .reveal-image-3 {
+    min-height: 400px;
+}
+
 .reveal-image-1 {
     background-image: url('./img/ben-rosett-WdJkXFQ4VHY-unsplash.webp');
-    min-height: 400px;
 }
 
 .reveal-image-2 {
     background-image: url('./img/dariusz-sankowski-3OiYMgDKJ6k-unsplash.webp');
-    min-height: 400px;
 }
 
 .reveal-image-3 {
     background-image: url('./img/scott-graham-5fNmWej4tAA-unsplash.webp');
-    min-height: 400px;
 }
 
 /* Sections */
@@ -77,6 +78,7 @@ main, body, html {
 .section p {
     width: 75%;
     margin: auto;
+    max-width: 900px;
 }
 
 .section-light {
@@ -91,6 +93,7 @@ main, body, html {
 
 .reveal-text {
     width: 40%;
+    max-width: 700px;
     text-align: center;
     color: #000;
     font-size: 27px;
@@ -109,7 +112,7 @@ main, body, html {
 
 .reveal-text .border.trans {
     /* background-color: transparent; */
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .attribution {
