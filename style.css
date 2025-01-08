@@ -14,6 +14,10 @@ main, body, html {
     color: #666
 }
 
+h4 {
+    font-style: italic;
+}
+
 /* Body Images */
 .reveal-image-0, .reveal-image-1, .reveal-image-2, .reveal-image-3, .foreground-image, .big-logo {
     position: relative;
@@ -73,12 +77,18 @@ main, body, html {
 .section {
     text-align: center;
     padding: 50px 80px;
+
 }
 
-.section p {
+.section p, .section ul {
+    text-align: justify;
     width: 75%;
     margin: auto;
     max-width: 900px;
+    &:not(:last-child)  {
+        margin-bottom: 30px;
+    }
+
 }
 
 .section-light {
