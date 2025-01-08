@@ -13,25 +13,54 @@
     <link rel="manifest" href="./img/favicon/site.webmanifest">
     <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" as="style">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="https://cameronjguthrie.com/">
+    <meta charset="UTF-8">
+    <html lang="en"></html>
     <!-- Primary Meta Tags -->
     <title>Cameron Guthrie</title>
     <meta name="title" content="Cameron Guthrie">
-    <meta name="description" content="I'm an entrepreneur and digital nomad; always learning something new.  Adventures, business, projects, etc - here's what I'm up to.">
+    <meta name="description" content="Cameron Guthrie: Entrepreneur, problem solver, and lifelong learner. From building systems that simplify global logistics to empowering communities in Costa Rica, explore the stories, philosophies, and projects that drive meaningful impact.">
+    <meta name="author" content="Cameron Guthrie">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cameronjguthrie.com/">
+    <meta property="og:site_name" content="Cameron Guthrie">
     <meta property="og:title" content="Cameron Guthrie">
-    <meta property="og:description" content="I'm an entrepreneur and digital nomad; always learning something new.  Adventures, business, projects, etc - here's what I'm up to.">
+    <meta property="og:description" content="Cameron Guthrie: Entrepreneur, problem solver, and lifelong learner. From building systems that simplify global logistics to empowering communities in Costa Rica, explore the stories, philosophies, and projects that drive meaningful impact.">
     <meta property="og:image" content="https://cameronjguthrie.com/img/cjg-meta-preview-1200x628.jpg">
-    <!-- Twitter -->
+    <meta property="og:image:alt" content="Cameron Guthrie's logo and tagline.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:locale" content="en_US">
+    <!-- X (Twitter) -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://cameronjguthrie.com/">
     <meta property="twitter:title" content="Cameron Guthrie">
-    <meta property="twitter:description" content="I'm an entrepreneur and digital nomad; always learning something new.  Adventures, business, projects, etc - here's what I'm up to.">
+    <meta property="twitter:description" content="Cameron Guthrie: Entrepreneur, problem solver, and lifelong learner. From building systems that simplify global logistics to empowering communities in Costa Rica, explore the stories, philosophies, and projects that drive meaningful impact.">
     <meta property="twitter:image" content="https://cameronjguthrie.com/img/cjg-meta-preview-1200x628.jpg">
+    <meta name="twitter:site" content="@CameronGuthrie">
+    <!-- Security Headers -->
+    <!-- Content Security Policy (CSP) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+
+    <!-- X-Content-Type-Options -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- X-Frame-Options -->
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+    <!-- Referrer Policy -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    <!-- Cross-Origin-Embedder-Policy -->
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
     <script src="https://unpkg.com/@botpoison/browser" async></script>
 </head>
 <body>
@@ -52,9 +81,11 @@
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/cameronguthrie" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a></li>
-                <li><a href="https://www.instagram.com/cameronjguthrie" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a></li>
-                <li><a href="https://www.youtube.com/CameronJGuthrie" target="_blank"><i class="fab fa-youtube fa-lg"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/cameronguthrie" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                <li><a href="https://www.instagram.com/cameronjguthrie" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram-square fa-lg"></i></a></li>
+                <li><a href="https://www.youtube.com/CameronJGuthrie" target="_blank" aria-label="YouTube Channel"><i class="fab fa-youtube fa-lg"></i></a></li>
+                
+
             </ul>
         </nav>
     </header>
@@ -62,7 +93,7 @@
         <div class="reveal-image-0" id="home">
             <div class="foreground-image"></div>
             <div class="reveal-text big-logo" id="big-logo-top">
-                <img src="./img/CJG-logo-blue-box-800x279.webp" alt="Cameron Guthrie blue box logo">
+                <img src="./img/CJG-logo-blue-box-800x279.webp" alt="Cameron Guthrie blue box logo" loading="lazy">
             </div>
         </div>
 
@@ -195,9 +226,10 @@
                 I’m always looking to connect with people who share a passion for innovation, problem-solving, and creating meaningful impact. If that sounds like you, let’s talk.
             </p>
             <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/cameronguthrie" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                <li><a href="https://www.instagram.com/cameronjguthrie" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a></li>
-                <li><a href="https://www.youtube.com/CameronJGuthrie" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/cameronguthrie" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                <li><a href="https://www.instagram.com/cameronjguthrie" target="_blank" aria-label="Instagram Profile"><i class="fab fa-instagram-square fa-lg"></i></a></li>
+                <li><a href="https://www.youtube.com/CameronJGuthrie" target="_blank" aria-label="YouTube Channel"><i class="fab fa-youtube fa-lg"></i></a></li>
+                
             </ul>
             <div class="contact-form">
                 <form
@@ -222,7 +254,8 @@
                     <!-- Email -->
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter a valid email address" />
+
                     </div>
                     
                     <!-- Message -->
@@ -245,6 +278,6 @@
             </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
