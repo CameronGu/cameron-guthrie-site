@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+<Directory "/home/classicv/public_html/cameronjguthrie.com/.git">
+    Require all denied
+</Directory>
