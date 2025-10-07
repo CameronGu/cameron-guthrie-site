@@ -1,0 +1,62 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+---
+<PageLayout
+  title="About | Cameron Guthrie"
+  description="Early-stage operator who builds structure, systems, and leverage across travel, finance, property, and software."
+  canonical={`${site.url}/about`}
+>
+  <article class="space-y-12">
+    <header class="space-y-6">
+      <h1 class="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+        About
+      </h1>
+      <p class="max-w-3xl text-lg text-muted">
+        Most of my work starts in the early stages—when ideas are ambitious, timelines are tight,
+        and structure doesn’t exist yet. I learn fast, connect disciplines, and build systems that
+        turn those ideas into something real.
+      </p>
+      <p class="max-w-3xl text-lg text-muted">
+        My background is entrepreneurial. I’ve founded and run companies in travel, finance, property,
+        and software. I understand early-stage chaos from the inside, which is why I often end up
+        helping others navigate it too. My role usually isn’t defined by a title. I step in early,
+        see the whole picture, and help build what’s needed to get moving fast.
+      </p>
+    </header>
+
+    <section class="grid gap-10 md:grid-cols-3">
+      <div class="space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-foreground">Builder</h2>
+        <p class="text-base text-muted">
+          I like shaping messy workflows into clear, durable systems. Sometimes that’s code.
+          Sometimes it’s financial structures or legal frameworks. Always it’s about making things
+          work smoothly.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-foreground">Strategist</h2>
+        <p class="text-base text-muted">
+          I move between logistics, finance, and technology easily. I look for the real levers,
+          the structural points that make a project stable and scalable.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h2 class="font-display text-2xl font-semibold text-foreground">Operator</h2>
+        <p class="text-base text-muted">
+          I build and run companies in real environments, not just on whiteboards. Tight deadlines,
+          imperfect data, real stakes. I enjoy making things work under pressure and designing them
+          to keep working when no one’s looking.
+        </p>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="font-display text-2xl font-semibold text-foreground">Where I work</h2>
+      <p class="max-w-3xl text-base text-muted">
+        I live in Costa Rica. I split my time between running businesses, designing tools, and
+        looking for the next interesting challenge.
+      </p>
+    </section>
+  </article>
+</PageLayout>

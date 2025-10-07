@@ -1,0 +1,18 @@
+---
+title: "Lending Ledger"
+slug: "lending-ledger"
+summary: "Loan servicing system for private lending operations in Costa Rica."
+tags: ["finance", "ops", "cli"]
+status: "active"
+date_started: "2019-06-01"
+date_updated: "2025-07-18"
+featured: true
+---
+
+Private lending in Costa Rica means dealing with multiple currencies, shifting collateral valuations, and legal structures that require precise documentation. Off-the-shelf options don’t support the way we structure deals.
+
+Lending Ledger is an internal system that tracks every loan from origination to payoff. It generates power-of-attorney packages, monitors collateral coverage, and produces investor statements automatically. The CLI portion handles quick-look risk checks when we’re evaluating new deals on the go.
+
+Every loan and collateral record syncs to a cloud document store with notarized PDFs, so any partner can audit the portfolio at a moment’s notice. Default scenarios trigger automated legal workflows, cutting days off the response time.
+
+It’s built in TypeScript with a Postgres core and a set of small services for document generation and payment tracking. The goal is clarity: every stakeholder should know, at a glance, the state of the book and the actions required.

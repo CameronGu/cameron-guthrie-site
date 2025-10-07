@@ -1,0 +1,29 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+---
+<PageLayout
+  title="Contact | Cameron Guthrie"
+  description="If something here resonates, reach out with a real project, sharp question, or clear idea."
+  canonical={`${site.url}/contact`}
+>
+  <section class="space-y-6">
+    <h1 class="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+      Contact
+    </h1>
+    <p class="max-w-2xl text-lg text-muted">
+      If something here resonates, reach out.
+    </p>
+    <p class="max-w-2xl text-lg text-muted">
+      The best conversations usually start with a real project, a sharp question, or a clear idea.
+      I’m not interested in vague pitches or bulk solicitations.
+    </p>
+    <a
+      href="mailto:hello@cameronjguthrie.com"
+      class="inline-flex w-fit items-center gap-3 rounded-full border border-accent/60 bg-accent/15 px-6 py-3 text-base font-semibold text-accent transition hover:border-accent hover:bg-accent/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
+      <span aria-hidden="true">📧</span>
+      hello@cameronjguthrie.com
+    </a>
+  </section>
+</PageLayout>

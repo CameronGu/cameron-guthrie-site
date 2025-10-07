@@ -1,0 +1,139 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Hero from '../components/site/Hero.astro';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '../components/site/Card';
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+
+const projects = (await getCollection('projects')) as CollectionEntry<'projects'>[];
+const featured = projects
+  .filter((project): project is CollectionEntry<'projects'> => Boolean(project.data.featured))
+  .slice(0, 3);
+---
+<PageLayout
+  title="Cameron Guthrie | Entrepreneur & Strategic Integrator"
+  description="I tame chaos, connect disciplines, and turn complex ideas into working companies and systems."
+  canonical={site.url}
+  wide
+>
+  <Hero />
+
+  <section class="container mt-24 space-y-10">
+    <header class="max-w-2xl space-y-4 rounded-[calc(var(--radius-base)*0.9)] border border-secondary/40 bg-secondary/15 p-6 shadow-[0_20px_45px_-35px_color-mix(in_srgb,var(--color-secondary)45%,transparent)] supports-[backdrop-filter]:bg-secondary/20">
+      <h2 class="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+        I turn ambitious ideas into durable systems.
+      </h2>
+      <p class="text-lg text-muted">
+        Most of my work starts when the edges are fuzzy, timelines are tight, and the
+        path forward is still being drawn. I connect disciplines quickly and design
+        the operational backbone that makes the whole system work.
+      </p>
+    </header>
+    <div class="grid gap-6 md:grid-cols-3">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Builder</CardTitle>
+          <CardDescription>
+            I shape messy workflows into clear, durable systems—legal frameworks,
+            financial models, or the software that ties everything together.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Strategist</CardTitle>
+          <CardDescription>
+            I move between logistics, finance, and technology to find the structural
+            levers that make a project stable and ready to scale.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Operator</CardTitle>
+          <CardDescription>
+            I build and run companies in real environments—tight deadlines, imperfect
+            data, and high stakes—delivering systems that keep working when nobody’s watching.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+    </div>
+  </section>
+
+  <section class="container mt-24 space-y-10">
+    <header class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-2xl space-y-3">
+        <h2 class="font-display text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+          Featured projects &amp; tools
+        </h2>
+        <p class="text-lg text-muted">
+          Tools and systems built to solve real operational problems—travel logistics,
+          finance, property, and internal platforms that keep companies moving.
+        </p>
+      </div>
+      <a
+        href="/projects"
+        class="inline-flex items-center gap-2 rounded-full border border-secondary/60 bg-secondary/20 px-5 py-2 text-sm font-medium text-secondary-foreground transition hover:border-primary/60 hover:bg-secondary/35 hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        Browse all projects
+      </a>
+    </header>
+
+    {featured.length ? (
+      <div class="grid gap-6 md:grid-cols-3">
+        {featured.map((project) => (
+          <Card key={project.id} highlight>
+            <CardHeader>
+              <CardTitle>{project.data.title}</CardTitle>
+              <CardDescription>{project.data.summary}</CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-muted-foreground">
+              {project.data.tags.slice(0, 4).map((tag: string) => (
+                <span class="rounded-full border border-secondary/50 bg-secondary/15 px-3 py-1 text-secondary-foreground">
+                  {tag}
+                </span>
+              ))}
+            </CardContent>
+            <CardFooter className="flex items-center justify-between text-sm text-muted-foreground">
+              <span class="rounded-full bg-secondary/20 px-3 py-1 capitalize text-secondary-foreground">
+                {project.data.status.replace('-', ' ')}
+              </span>
+              <a
+                href={`/projects/${project.slug}`}
+                class="font-medium text-primary underline-offset-4 transition hover:text-accent hover:underline"
+              >
+                Read case
+              </a>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
+    ) : (
+      <p class="text-sm text-muted">
+        Featured projects will be published soon. In the meantime, explore the full set in the Projects &amp; Tools section.
+      </p>
+    )}
+  </section>
+
+  <section class="container mt-24 space-y-6">
+    <h2 class="font-display text-3xl font-semibold tracking-tight md:text-4xl">
+      What I’m looking for next
+    </h2>
+    <p class="max-w-2xl text-lg text-muted">
+      I split my time between running existing companies, designing new tools, and partnering with teams who need an integrator that can connect the dots quickly. If that sounds like you, let’s talk.
+    </p>
+    <a
+      href="/contact"
+      class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/60 bg-primary/15 px-6 py-3 text-sm font-semibold tracking-wide text-primary transition hover:border-primary hover:bg-primary/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+    >
+      Start a conversation
+    </a>
+  </section>
+</PageLayout>

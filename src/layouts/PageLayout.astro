@@ -1,0 +1,52 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Footer from '../components/site/Footer.astro';
+import Header from '../components/site/Header.astro';
+import SEO from '../components/site/SEO.astro';
+import { site, type SeoProps } from '../config/site';
+
+interface PageLayoutProps {
+  title?: string;
+  description?: string;
+  wide?: boolean;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: SeoProps['ogType'];
+  noindex?: boolean;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  wide = false,
+  canonical = site.url,
+  ogImage = site.ogImage,
+  ogType = 'website',
+  noindex = false,
+}: PageLayoutProps = Astro.props;
+---
+<BaseLayout>
+  <SEO
+    slot="head"
+    {title}
+    {description}
+    {canonical}
+    {ogImage}
+    {ogType}
+    {noindex}
+  />
+  <slot name="head" slot="head" />
+  <div class="flex min-h-screen flex-col">
+    <Header />
+    <main
+      id="main-content"
+      class:list={[
+        'flex-1 py-16',
+        wide ? '' : 'container',
+      ]}
+    >
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</BaseLayout>

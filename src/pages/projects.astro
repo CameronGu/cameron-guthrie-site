@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import ProjectsGrid from '../components/projects/ProjectsGrid.tsx';
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+
+const projects = (await getCollection('projects')) as CollectionEntry<'projects'>[];
+const items = projects.map((project) => ({
+  slug: project.slug,
+  title: project.data.title,
+  summary: project.data.summary,
+  tags: project.data.tags,
+  status: project.data.status,
+  repo: project.data.repo,
+  demo: project.data.demo,
+  featured: project.data.featured,
+}));
+---
+<PageLayout
+  title="Projects & Tools | Cameron Guthrie"
+  description="Tools built to solve real operational problems—travel logistics, finance, property, and platform infrastructure."
+  canonical={`${site.url}/projects`}
+  wide
+>
+  <section class="container space-y-6">
+    <h1 class="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+      Projects &amp; Tools
+    </h1>
+    <p class="max-w-3xl text-lg text-muted">
+      I build tools to solve real problems—usually my own. If they work well, I share them. Some are sharp
+      and focused; some are rough but useful; some are experiments. They’re part of how I turn ambitious ideas
+      into working systems.
+    </p>
+  </section>
+
+  <section class="container mt-10">
+    <ProjectsGrid client:load items={items} />
+  </section>
+
+  <section class="container mt-16 space-y-4">
+    <h2 class="font-display text-2xl font-semibold text-foreground">Why share them?</h2>
+    <ul class="list-disc space-y-2 pl-6 text-base text-muted">
+      <li>Because good tools travel well.</li>
+      <li>Because someone else is usually facing a similar tangle.</li>
+      <li>Because working in the open keeps things honest.</li>
+    </ul>
+  </section>
+</PageLayout>

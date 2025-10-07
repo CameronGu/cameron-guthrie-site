@@ -1,0 +1,90 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+---
+<PageLayout
+  title="Work | Cameron Guthrie"
+  description="Ventures across travel, finance, property, and software—each built from the ground up with durable systems."
+  canonical={`${site.url}/work`}
+>
+  <article class="space-y-12">
+    <header class="space-y-6">
+      <h1 class="font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl">
+        Work
+      </h1>
+      <p class="max-w-3xl text-lg text-muted">
+        I’ve built and operated ventures in travel, finance, property, and software. In each case,
+        the pattern is the same: start early, see the landscape quickly, and build the operational
+        backbone that allows the work to scale.
+      </p>
+    </header>
+
+    <section class="space-y-10">
+      <article class="space-y-4">
+        <h2 class="font-display text-3xl font-semibold text-foreground md:text-4xl">
+          Already There Travel
+        </h2>
+        <p class="text-base text-muted">
+          Corporate travel management for large contractor deployments. We built clear systems to handle
+          complex logistics at scale without losing flexibility.
+        </p>
+        <ul class="space-y-2 text-sm text-muted">
+          <li><strong class="text-foreground">Focus:</strong> group deployments, negotiated hotel rates, compliance, operational clarity</li>
+          <li><strong class="text-foreground">Role:</strong> Co-founder, systems architect, operator</li>
+        </ul>
+        <a
+          href="https://alreadytheretravel.com"
+          class="inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 transition hover:text-accent/80 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit site
+        </a>
+      </article>
+
+      <article class="space-y-4">
+        <h2 class="font-display text-3xl font-semibold text-foreground md:text-4xl">
+          PrestaMio / Native Capital
+        </h2>
+        <p class="text-base text-muted">
+          Private lending and mortgage financing in Costa Rica. We structure loans with strong collateral,
+          clear legal frameworks, and disciplined underwriting—designed to protect both borrowers and investors.
+        </p>
+        <ul class="space-y-2 text-sm text-muted">
+          <li><strong class="text-foreground">Focus:</strong> real estate-backed loans, power-of-attorney structures, cross-border finance</li>
+          <li><strong class="text-foreground">Role:</strong> Founder, deal originator, structure designer</li>
+        </ul>
+      </article>
+
+      <article class="space-y-4">
+        <h2 class="font-display text-3xl font-semibold text-foreground md:text-4xl">
+          Property &amp; Development
+        </h2>
+        <p class="text-base text-muted">
+          I invest in and develop properties in Costa Rica. These range from container storefronts to vacation rentals.
+          The focus is on practical, durable designs that work within local conditions.
+        </p>
+        <ul class="space-y-2 text-sm text-muted">
+          <li><strong class="text-foreground">Focus:</strong> adaptive design, legal clarity, financial discipline</li>
+          <li><strong class="text-foreground">Role:</strong> Owner-operator</li>
+        </ul>
+      </article>
+
+      <article class="space-y-4">
+        <h2 class="font-display text-3xl font-semibold text-foreground md:text-4xl">
+          Software &amp; Tools
+        </h2>
+        <p class="text-base text-muted">
+          I build internal software to support my businesses: travel operations, loan tracking, property management, finance.
+          Most of it started as something I needed quickly and grew from there.
+        </p>
+        <a
+          href="/projects"
+          class="inline-flex items-center gap-2 text-sm font-medium text-accent underline-offset-4 transition hover:text-accent/80 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          See projects
+        </a>
+      </article>
+    </section>
+  </article>
+</PageLayout>
